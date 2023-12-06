@@ -8,7 +8,9 @@ import java.util.Properties;
 public class ConfigReader {
 
 	
-	private Properties prop;
+	private static Properties prop;
+	private final static String propertyFilePath = "./src/test/resources/config/config.properties";	
+	
 	public Properties init_prop()
 	{
 		prop = new Properties();
@@ -26,4 +28,12 @@ public class ConfigReader {
 		}
 		return prop;
 	}
+	public static String getexcelfilepath() {
+		String xlfilepath = prop.getProperty("excelDataPath");
+		if(xlfilepath != null)
+			return xlfilepath;
+		else
+			throw new RuntimeException("xlfilepath not specified in the Configuration.properties file.");
+	}
+	
 }
