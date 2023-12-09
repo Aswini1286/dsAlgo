@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.json.simple.parser.ParseException;
 
 import factory.DriverFactory;
 import io.cucumber.datatable.DataTable;
@@ -67,5 +68,10 @@ public class DataStructuresIntroduction_Steps {
 	  
 	  commonfns.checkNoOfLinks(); 
 	}
+	@Given("User is in Practice Question <{int}> and checks the editor with valid and invalid python code")
+	public void user_is_in_practice_question_and_checks_the_editor_with_valid_and_invalid_python_code(Integer lnkNo) throws InterruptedException, IOException, ParseException {
+	    commonfns.practiceQuestion(lnkNo);
+	}
+
 
 }

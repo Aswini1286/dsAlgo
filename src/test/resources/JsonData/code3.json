@@ -1,0 +1,39 @@
+[
+{
+"PythonCodenRes":
+{
+"ln1":"def findMaxConsecutiveOnes(nums):",
+"ln2":"    max_count = 0",
+"ln3":"    count = 0",
+"ln4":"    for i in nums:",
+"ln5":"        if i == 1:",
+"ln6":"            count += 1"  ,
+"ln7":"        else:",
+"ln8":"            max_count = max(max_count, count)",
+"ln9":"            count = 0",
+"ln10":"    return max(max_count, count)",
+"ln11":"nums = [1,1,0,1,1,1,1]",
+"ln12":"print(findMaxConsecutiveOnes(nums))",
+"result":"4"
+}
+}
+,
+{
+"PythonCodenRes":
+{
+"ln1":"def findMaxConsecutiveOnes(nums):",
+"ln2":"    max_count = 0",
+"ln3":"    count = 0",
+"ln4":"    for i in nums:",
+"ln5":"   if i == 1:",
+"ln6":"            count += 1"  ,
+"ln7":"        else:",
+"ln8":"            max_count = max(max_count, count)",
+"ln9":"            count = 0",
+"ln10":"    return max(max_count, count)",
+"ln11":"nums = [1,1,0,1,1,1,1]",
+"ln12":"print(findMaxConsecutiveOnes(nums))",
+"result":"error"
+}
+}
+] 

@@ -15,10 +15,14 @@ Scenario Outline: User is successfully navigated to Array Page and checks all th
 Given User is in home page after login successfully
 When User clicks on GetStarted button below "array" 
 Then User is in the "Array" page
-And User clicks on each link in the page and checks "Try here" functionality with the python code 
+And User clicks on each link in the page and checks "Try here" functionality with the python code
 
-	
+Given User is in Practice Question <1> and checks the editor with valid and invalid python code
 
+Given User is in Practice Question <2> and checks the editor with valid and invalid python code 
 
+Given User is in Practice Question <3> and checks the editor with valid and invalid python code	
+
+Given User is in Practice Question <4> and checks the editor with valid and invalid python code
 
 

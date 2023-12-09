@@ -7,6 +7,7 @@
   <groupId>ds-algo</groupId>
   <artifactId>dsAlgo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <packaging>jar</packaging>
 
   <name>dsAlgo</name>
@@ -19,6 +20,11 @@
   </properties>
 
   <dependencies>
+	  <dependency>
+  <groupId>com.googlecode.json-simple</groupId>
+  <artifactId>json-simple</artifactId>
+  <version>1.1.1</version>
+</dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
@@ -138,6 +144,13 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
+        <!-- Added this testng.xml configuration when tried to run from jenkins for cucumber project-->
+        <configuration>
+			<suiteXmlFiles>
+		  		<suiteXmlFile>testng.xml</suiteXmlFile>
+	  		</suiteXmlFiles>
+		</configuration>
+		
       </plugin>
     </plugins>
   </build>
