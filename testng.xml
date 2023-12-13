@@ -4,19 +4,19 @@
   <test thread-count="5" name="Testchrome">
 	  <parameter name="browser" value="chrome"></parameter>
 	  <classes>
-		  <class name="runner.test_runner"></class>
+		  <class name="runner.runnertest"></class>
 	  </classes>
   </test> <!-- Test -->
 <!--   <test thread-count="5" name="Testfirefox">-->
 <!--	  <parameter name="browser" value="firefox"></parameter>-->
 <!--	  <classes>-->
-<!--		  <class name="runner.test_runner"></class>-->
+<!--		  <class name="runner.runnertest"></class>-->
 <!--	  </classes>-->
 <!--  </test>  Test -->
    <test thread-count="5" name="Testedge">
 	  <parameter name="browser" value="edge"></parameter>
 	  <classes>
-		  <class name="runner.test_runner"></class>
+		  <class name="runner.runnertest"></class>
 	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

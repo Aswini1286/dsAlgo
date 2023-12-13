@@ -6,8 +6,8 @@ stepDefinition\RegisterPage_Steps.class
 page\SignInPage.class
 stepDefinition\DataStructuresIntroduction_Steps.class
 page\DataStructuresIntroduction.class
-runner\test_runner.class
 factory\DriverFactory.class
+runner\runnertest.class
 page\RegisterPage.class
 stepDefinition\PortalPage_Steps.class
 appHooks\ApplicationHooks.class

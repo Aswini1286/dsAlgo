@@ -7,7 +7,35 @@
   <groupId>ds-algo</groupId>
   <artifactId>dsAlgo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <!-- Added this testng.xml configuration when tried to run from jenkins for cucumber project-->
+
+        <configuration>
+			<includes>
+				<include>**/runnertest.java</include>
+			</includes>
+			
+			
+		</configuration>
+		
+      </plugin>
+      <plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.0</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+    </plugins>
+  </build>
+
   <packaging>jar</packaging>
 
   <name>dsAlgo</name>
@@ -20,6 +48,25 @@
   </properties>
 
   <dependencies>
+	  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.11.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.2.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-junit47 -->
+<dependency>
+    <groupId>org.apache.maven.surefire</groupId>
+    <artifactId>surefire-junit47</artifactId>
+    <version>3.2.2</version>
+</dependency>
+
 	  <dependency>
   <groupId>com.googlecode.json-simple</groupId>
   <artifactId>json-simple</artifactId>
@@ -116,6 +163,14 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
+<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-runner</artifactId>
+    <version>1.10.1</version>
+    <scope>test</scope>
+</dependency>
+
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 <dependency>
     <groupId>io.cucumber</groupId>
@@ -134,24 +189,38 @@
     <version>5.7.7</version>
 </dependency>
 		
-
+<!--  https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm  -->
+<dependency>
+<groupId>io.qameta.allure</groupId>
+<artifactId>allure-cucumber7-jvm</artifactId>
+<version>2.25.0</version>
+</dependency>
+<!--  https://mvnrepository.com/artifact/io.qameta.allure/allure-testng  -->
+<dependency>
+<groupId>io.qameta.allure</groupId>
+<artifactId>allure-testng</artifactId>
+<version>2.20.1</version>
+</dependency>
+<!--  https://mvnrepository.com/artifact/io.qameta.allure/allure-commandline  -->
+<dependency>
+<groupId>io.qameta.allure</groupId>
+<artifactId>allure-commandline</artifactId>
+<version>2.25.0</version>
+<type>pom</type>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-maven</artifactId>
+    <version>2.8</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+<dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber7-adapter</artifactId>
+    <version>1.14.0</version>
+</dependency>
 
   </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
-        <!-- Added this testng.xml configuration when tried to run from jenkins for cucumber project-->
-        <configuration>
-			<suiteXmlFiles>
-		  		<suiteXmlFile>testng.xml</suiteXmlFile>
-	  		</suiteXmlFiles>
-		</configuration>
-		
-      </plugin>
-    </plugins>
-  </build>
-</project>
+ </project>
