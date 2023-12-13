@@ -1,0 +1,35 @@
+[
+{
+"PythonCodenRes":
+{
+"ln1":"lst=[1,6,3,5]",
+"ln2":"i=7",
+"ln3":"if i in lst:",
+"ln4":"  print \"exist\" ",
+"ln5":"else:",
+"ln6":"  print \"not exist\""  ,
+"ln7":"",
+"ln8":"",
+"ln9":"",
+"ln10":"",
+"result":"not exist"
+}
+}
+,
+{
+"PythonCodenRes":
+{
+"ln1":"lst=[1,6,3,5]",
+"ln2":"i=7",
+"ln3":"if i in lst:",
+"ln4":"print \"exist\" ",
+"ln5":"else:",
+"ln6":"  print \"not exist\""  ,
+"ln7":"",
+"ln8":"",
+"ln9":"",
+"ln10":"",
+"result":"error"
+}
+}
+] 

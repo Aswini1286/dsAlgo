@@ -12,11 +12,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import page.SignInPage;
+import utilities.ConfigReader;
 import utilities.ExcelReader;
 
 public class SignInPage_Steps {
 	
 	SignInPage signInPage = new SignInPage(DriverFactory.getDriver());
+	String xlpath=ConfigReader.getexcelfilepath();
 	
 	@Given("The user is in the Sign in page")
 	public void the_user_is_in_the_sign_in_page() {
@@ -56,7 +58,7 @@ public class SignInPage_Steps {
 	 ExcelReader reader = new ExcelReader();
 	 //String filePath = System.getProperty("user.id");
 	 //System.out.println(filePath);
-	 List<Map<String,String>> testData = reader.getData("/Users/aswi1/eclipse-workspace/dsAlgo/src/test/resources/Exceldata/testdata.xlsx", sheetName);
+	 List<Map<String,String>> testData = reader.getData(xlpath, sheetName);
 	 String userName = testData.get(rowNumber).get("username");
 	 String passWord = testData.get(rowNumber).get("password");
 	 String exp_Result = testData.get(rowNumber).get("result");
