@@ -57,8 +57,8 @@ Scenario: User gets redirected to HomePage successfully with valid login and pas
 	Given User opens Register Page
 	When User enters valid username, password, confirmPassword and clicks on Register
 	|username|password|confirmPassword|
-	|NumNi16@gmail.com|Tester12345|Tester12345|
+	|NumNi17@gmail.com|Tester12345|Tester12345|
 	
 	Then The user should be redirected to Homepage with the message "New Account Created. You are logged in as <username>"
 	
-	|NumNi16@gmail.com|
+	|NumNi17@gmail.com|
